@@ -1,0 +1,138 @@
+/* ------ Media Queries ------ */
+
+/*------1201px  -  1366px-------*/
+
+@media screen and (max-width: 1365px) {
+	
+}
+
+/* 992-1200px */
+@media screen and (max-width: 1200px) {
+  .header {
+    .menu {
+      li {
+        margin-right: 20px;
+      }
+    }
+
+    &__phone {
+      display: none;
+    }
+  }
+}
+
+/* 768-992px */
+@media screen and (max-width: 992px) {
+  .header {
+    .gamburger {
+      display: block;
+      font-size: 35px;
+      color: $white;
+    }
+
+    nav {
+      overflow: hidden;
+    }
+
+    .menu {
+      transform: translateY(-300%);
+      overflow: hidden;
+
+      li {
+        margin-right: 0;
+        margin-top: 25px;
+      }
+    }
+
+    .opened {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      width: 100%;
+      left: 0;
+      top: 0;
+      padding-top: 70px;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(0);
+      transition: all 0.5s ease;
+      z-index: 9;
+      background-color: $blue2;
+    }
+
+    .open {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      color: #fff;
+      opacity: 1;
+    }
+
+    .close-menu {
+      display: none;
+    }
+  }
+
+  .footer {
+    &-wrap {
+      justify-content: space-around;
+    }
+
+    &-wrap__menu {
+      display: none;
+    }
+
+    &-rights {
+      margin-top: 50px;
+    }
+  }
+}
+
+/* 576-768px */
+@media screen and (max-width: 768px) {
+  .box-modal {
+    width: 100%;
+  }
+
+  .modal-form {
+    width: 100%;
+  }
+
+  .form {
+    padding: 10px;
+
+    &__title {
+      font-size: 30px;
+    }
+
+    &__text {
+      font-size: 16px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &-control {
+      width: 100%;
+    }
+
+    &-check {
+      padding-left: 3.5rem;
+    }
+
+    &__btn {
+      width: 100%;
+    }
+
+    &-check-label {
+      width: 100%;
+    }
+
+    .check__box {
+      left: 0.5em;
+    }
+  }
+}
+
+/* 320-576px */
+@media screen and (max-width: 576px) {}

@@ -1,0 +1,91 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+
+
+
+
+
+.header {
+	.menu {
+		@include between-center;
+		transition: all .5s ease;
+		background-color: #666;
+	}
+
+}
+
+//footer
+.footer {
+	padding: 55px 0 32px;
+	background-color: #003768;
+	color: #ededed;
+
+	&-wrap {
+		display: flex;
+		justify-content: space-between;
+
+		&__menu {
+			display: flex;
+
+			li:not(:last-child) {
+				margin-right: 25px;
+			}
+
+			li a {
+				font-size: 12px;
+				color: #ededed;
+			}
+
+			li a:hover {
+				color: $blue;
+				text-decoration: underline;
+			}
+		}
+
+		&__text {
+			margin-top: 19px;
+			font-size: 14px;
+			width: 290px;
+			max-width: 290px;
+		}
+
+		&__contacts-box {
+			text-align: right;
+
+			i {
+				color: $blue;
+				margin-right: 10px;
+				margin-left: auto;
+			}
+
+			.fa-phone {
+				transform: rotate(97deg);
+			}
+		}
+
+		&__contacts-box-phone {
+			color: #f9f9f9;
+			font-size: 14px;
+			font-weight: 500;
+		}
+
+		&__contacts-box-phone:hover {
+			color: $blue;
+		}
+
+		&__contacts-box-mail {
+			color: #ededed;
+			font-size: 14px;
+			font-weight: 400;
+		}
+
+		&__contacts-box-mail:hover {
+			color: $blue;
+		}
+	}
+}
+
+@import "media";

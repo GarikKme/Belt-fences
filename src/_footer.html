@@ -1,0 +1,97 @@
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="footer-wrap">
+            <div class="footer-wrap__logo">
+                <a href="index.html">
+                    <img src="images/footer-logo.svg" alt="footer logo">
+                </a>
+            </div>
+            <ul class="footer-wrap__menu">
+                <li><a href="#about">О КОМПАНИИ</a></li>
+                <li><a href="#services">УСЛУГИ</a></li>
+                <li><a href="#emit">ПРЕИМУЩЕСТВА</a></li>
+                <li><a href="#clients">КЛИЕНТЫ</a></li>
+                <li><a href="#contacts">КОНТАКТЫ</a></li>
+            </ul>
+            <div class="footer-wrap__contacts d-flex flex-column">
+                <div class="footer-wrap__contacts-box d-flex align-items-center">
+                    <i class="fa fa-phone"></i>
+                    <a href="tel:+79876543210" class="footer-wrap__contacts-box-phone">+7 (987) 654-32-10</a>
+                </div>
+                <div class="footer-wrap__contacts-box d-flex align-items-center">
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:info@vimtech.ru" class="footer-wrap__contacts-box-mail">info@vimtech.ru</a>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-4 d-none d-lg-block">
+                <p class="footer-wrap__text">105064, г. Москва, Гороховский переулок,
+                    д. 14, стр. 2, пом. 5, оф. 6Г</p>
+            </div>
+            <div class="col-lg-5 text-center">
+                <p class="footer-rights">© ООО “VIMtech” 2020 / Все права защищены</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Modal window -->
+<div style="display: none;">
+    <div class="box-modal" id="exampleModal">
+        <div class="box-modal_close arcticmodal-close">
+            <div class="close-button">
+                <img src="images/close.svg" alt="">
+            </div>
+        </div>
+        <form action="success.php" method="POST" class="form modal-form js-form" id="popupResult">
+            <div class="form-group">
+                <label>Имя</label>
+                <input type="text" class="form-control" name="name" placeholder="Введите Ваше имя">
+            </div>
+            <div class="form-group">
+                <label>Телефон</label>
+                <input type="tel" class="form-control" name="tel" placeholder="Введите Ваше телефон">
+            </div>
+            <div class="form-group">
+                <label>E-mail</label>
+                <input type="email" class="form-control" name="email" placeholder="Введите Ваше e-mail"></div>
+            <div class="form-check">
+                <label class="form-check-label check">
+                    <input class="form-check-input check" type="checkbox" name="checkbox" value="true" checked>
+                    <span class="check__box"> </span>
+                    Я согласен на обработку моих
+                    персональных данных</label>
+            </div>
+            <button class="form__btn button" data-submit>Отправить заявку</button>
+            <a href="#" class="footer__logo-politics">Политика конфиденциальности<br>
+                Политика использования файлов cookie<br>
+                FAQ</a>
+        </form>
+    </div>
+</div>
+<!-- Индикация процесса отправки формы -->
+<div id="loader">
+    <img src="images/ripple.svg">
+</div>
+<!-- Сообщение "спасибо" после отправки формы -->
+<div id="overlay">
+    <div id="thx">
+        <div class="close-button">
+            <img src="images/close.svg" alt="">
+        </div>
+        <h4>Спасибо!<br> Ваша заявка отправлена</h4>
+        <p class="thing">Долго ждать?</p>
+        <p>Наберите прямо сейчас</p>
+        <div class="header__contacts-wrap">
+            <img src="images/tel.svg" alt="phone">
+            <a href="tel:+79611565080" class="header__contacts-phone">+7 961 156 50 80</a>
+        </div>
+        <p>Или добавляйтесь в мессенджер</p>
+        <div class="links">
+            <a href="http://"><img src="images/whatsapp 1.svg" alt="WhatsApp"> </a>
+            <a href="http://"><img src="images/Telegram.svg" alt="WhatsApp"> </a>
+            <a href="http://"><img src="images/viber 1.svg" alt="WhatsApp"> </a>
+        </div>
+    </div>
+</div>

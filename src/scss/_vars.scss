@@ -1,10 +1,9 @@
 // colours
 $white:#fff;
-$turquoise:#AAF3FF;
-$blue:#11A5D3;
-$blue2: rgba(#11A5D3, .5);
+$yellow: #F6C40D;
 $black:#000;
-$black2:#2B2A29;
+$brown:#DB7F1B;
+$grey:#4E4D4D;
 //mixins
 @mixin between {
   display: flex;
@@ -25,13 +24,13 @@ $black2:#2B2A29;
   align-items: center;
 }
 //fonts mixin
-@mixin font-face($font-family, $url, $weight) {
-  @font-face {
-    font-family: '#{$font-family}';
-    src: url('../fonts/#{$url}.woff2') format('woff2'),
-    url('../fonts/#{$url}.woff') format('woff');
-    font-weight: #{$weight};
-    font-display: swap;
-    font-style: normal;
-  }
-}
+// @mixin font-face($font-family, $url, $weight) {
+//   @font-face {
+//     font-family: '#{$font-family}';
+//     src: url('../fonts/#{$url}.woff2') format('woff2'),
+//     url('../fonts/#{$url}.woff') format('woff');
+//     font-weight: #{$weight};
+//     font-display: swap;
+//     font-style: normal;
+//   }
+// }

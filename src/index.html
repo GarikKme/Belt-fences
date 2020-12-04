@@ -1,88 +1,131 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<title>Document</title>
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<!-- Favicon -->
-	<link rel="icon" href="">
-	<link rel="shortcut icon" href="">
-	<!-- OG Tags -->
-<!--	<meta property="og:title" content="">-->
-<!--	<meta property="og:description" content=''>-->
-<!--	<meta property="og:type" content="article">-->
-<!--	<meta property="og:image" content="">-->
-<!--	<meta property="og:site_name" content="TEST">-->
-	<!-- Main CSS -->
-	<link rel="stylesheet" href="css/style.min.css">
-
-</head>
-
-<body>
 <!-- Header -->
 @include('_header.html')
 <!--End of the Header -->
-<!-- -->
-<section>
-	<div class="container">
-		<div class="row">
-			<h1 class="main__title">Hello!)</h1>
+<!-- offer -->
+<section class="section offer">
+	<div class="container offer__container">
+		<img src="images/offer-img.png" alt="offer">
+		<div class="offer__box">
+			<h1 class="offer__title">
+				Собственное
+				производство
+			</h1>
+			<p class="offer__text">
+				всех видов автомобильно-
+				дорожной продукции
+			</p>
+			<button class="button offer__btn">ЗАКАЗАТЬ</button>
 		</div>
 	</div>
 </section>
-<!--End of the  -->
-<!-- -->
-<section>
+<!--End of the  offer-->
+<!-- product -->
+<section class="section product">
 	<div class="container">
-		<div class="row">
+		<div class="product__wrap">
+			<img src="images/product-img.png" alt="product">
+			<div class="product__box">
+				<h2 class="product__title">
+					Собственное производство
+					на европейском оборудовании
+				</h2>
+				<a class="button product__btn" href="product.html">ПОДРОБНЕЕ</a>
+			</div>
+			<img src="images/product-img2.png" alt="product" class="product__img">
+		</div>
+	</div>
+</section>
+<!--End of the  product -->
+<!-- production -->
+<section class="section production">
+	<div class="container">
+		<h2 class="production__title">
+			НАША ПРОДУКЦИЯ
+		</h2>
+		<div class="production__wrap">
+			<a href="#" class="production__card">
+				<p class="production__card-title">
+					дорожные
+					знаки
+				</p>
+			</a>
+		</div>
+	</div>
+</section>
+<!--End of the  production -->
+<!-- contact -->
+<section class="section contact">
+	<div class="container">
+		<div class="contact__box">
+			<form action="success.php" method="POST" class="form js-form" id="popupResult">
+				<h2 class="form__title">
+					Оставьте заявку
+				</h2>
+				<p class="form__text">
+					Оставьте свои контактные данные,<br>
+					и наши специалисты свяжутся с вами
+				</p>
+				<div class="form-group">
+					<img src="images/user.svg" alt="name">
+					<input type="text" class="form-control" name="name" placeholder="Имя">
+				</div>
+				<div class="form-group">
+					<img src="images/phone.svg" alt="phone">
+					<input type="tel" class="form-control" name="tel" placeholder="Телефон">
+				</div>
+				<div class="form-group">
+					<img src="images/mail.svg" alt="email">
+					<input type="email" class="form-control" name="email" placeholder="E-mail"></div>
+				<button class="button form__btn" data-submit>Отправить заявку</button>
+				<p class="form__text2">
+					Нажимая на кнопку Заказать продвижение, вы даете согласие на обработку своих персональных данных
+				</p>
+			</form>
+			<img src="images/contact-man.png" alt="contact">
+		</div>
+	</div>
+</section>
+<!--End of the  contact -->
+<!--  works -->
+<section class="section works">
+	<div class="container">
+		<h2 class="works__title">
+			НАШИ РАБОТЫ
+		</h2>
+		<!-- Slider main container -->
+		<div class="swiper-container">
+			<!-- Additional required wrapper -->
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide">
+					<img src="images/slidetest.png" alt="works">
+				</div>
+				<div class="swiper-slide">
+					<img src="images/slidetest.png" alt="works">
+				</div>
+				<div class="swiper-slide">
+					<img src="images/slidetest.png" alt="works">
+				</div>
+				
+			</div>
+			<!-- If we need pagination -->
+			<div class="swiper-pagination"></div>
+
+			<!-- If we need navigation buttons -->
+			<div class="swiper-button-prev">
+				<img src="images/arrowLeft.svg" alt="arrow">
+			</div>
+			<div class="swiper-button-next">
+				<img src="images/arrowRight.svg" alt="arrow">
+			</div>
 
 		</div>
 	</div>
 </section>
-<!--End of the  -->
-<!-- -->
-<section>
-	<div class="container">
-		<div class="row">
-
-		</div>
-	</div>
-</section>
-<!--End of the  -->
-<!-- -->
-<section>
-	<div class="container">
-		<div class="row">
-
-		</div>
-	</div>
-</section>
-<!--End of the  -->
-<!-- -->
-<section>
-	<div class="container">
-		<div class="row">
-
-		</div>
-	</div>
-</section>
-<!--End of the  -->
-<!-- -->
+<!--End of the  works -->
+<!-- seo -->
+@include('_seo.html')
+<!--End of the  seo -->
 <!-- footer -->
 @include('_footer.html')
 <!--End of the  footer-->
-
-
-<!-- JS Scripts -->
-<script src="js/main.js"></script>
-<!--<script>-->
-<!--	$(document).ready(function () {-->
-<!--		$('head').append("<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap' rel='stylesheet'>");-->
-<!--	});-->
-<!--</script>-->
-</body>
-
-</html>

@@ -9,12 +9,180 @@
 
 
 .header {
+	padding-top: 19px;
+	span {
+		font-weight: 300;
+		font-size: 16px;
+		max-width: 206px;
+		width: 206px;
+		display: block;
+		margin-top: 7px;
+	}
+	span.work-time {
+		max-width: 160px;
+		width: 160px;
+		line-height: 16px;
+	}
+	&__wrap-top {
+		@include between;
+	}
+	&__wrap-bottom {
+		background: #4E4D4D;
+		@include between;
+		min-height: 70px;
+	}
 	.menu {
 		@include between-center;
 		transition: all .5s ease;
-		background-color: #666;
+		background: #4E4D4D;
+		li {
+			&:not(:last-child) {
+				margin-right: 50px;
+			}
+			a {
+				color: $white;
+				&:hover {
+					color: $yellow;
+				}
+			}
+		}
+	}
+	&__phone {
+		font-size: 30px;
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		a {
+			color: $black;
+			&:hover {
+				color: $yellow;
+			}
+		}
+	}
+	&__btn {
+		border: 2px solid #F6C40D;
+		background: transparent;
+		border-radius: 5px;
+		height: 52px;
+		line-height: 48px;
+		color: #F8D23B;
+		font-size: 18px;
+		width: 222px;
+		max-width: 222px;
+		&:hover {
+			color: $white;
+		}
+	}
+	&__container {
+		@include between-center;
+	}
+	&__mail {
+		font-weight: 300;
+		font-size: 18px;
 	}
 
+}
+
+//offer
+.offer {
+	padding-top: 96px;
+	background-image: url(../images/offer-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	&__container {
+		display: flex;
+	}
+	&__box {
+		margin-left: 65px;
+	}
+	&__title {
+		margin: 40px 0 30px 0;
+	}
+	&__text {
+		font-size: 30px;
+		font-family: 'Roboto Condensed', sans-serif;
+		line-height: 43px;
+		text-transform: uppercase;
+		margin-bottom: 40px;
+	}
+}
+
+//product
+.product {
+	padding: 50px 0 100px;
+	&__img {
+		margin-top: 50px;
+	}
+	&__wrap {
+		@include between-center;
+	}
+	&__title {
+		text-align: center;
+		width: 300px;
+		max-width: 300px;
+	}
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $black;
+		margin-top: 32px;
+	}
+}
+
+.production {
+	padding-top: 93px;
+	background-image: url(../images/production-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	&__title {
+		text-align: center;
+	}
+	&__wrap {
+		display: grid;
+	}
+	&__card {
+		display: flex;
+		background: #FFFFFF;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+		&-title {
+			text-transform: uppercase;
+			font-size: 30px;
+			color: $black;
+		}
+	}
+}
+//contact
+.contact {
+	padding-top: 150px;
+	padding-bottom: 78px;
+	background-image: url(../images/contact-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	&__box {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+//works
+.works {
+	padding-top: 110px;
+	&__title {
+		text-align: center;
+	}
+}
+
+//seo
+.seo {
+	padding: 110px 0;
+	&__title {
+		text-align: center;
+		margin-bottom: 34px;
+	}
+	&__text {
+		text-align: center;
+	}
 }
 
 //footer
@@ -40,7 +208,7 @@
 			}
 
 			li a:hover {
-				color: $blue;
+				color: $yellow;
 				text-decoration: underline;
 			}
 		}
@@ -56,7 +224,7 @@
 			text-align: right;
 
 			i {
-				color: $blue;
+				color: $yellow;
 				margin-right: 10px;
 				margin-left: auto;
 			}
@@ -73,7 +241,7 @@
 		}
 
 		&__contacts-box-phone:hover {
-			color: $blue;
+			color: $yellow;
 		}
 
 		&__contacts-box-mail {
@@ -83,7 +251,7 @@
 		}
 
 		&__contacts-box-mail:hover {
-			color: $blue;
+			color: $yellow;
 		}
 	}
 }

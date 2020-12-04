@@ -16,7 +16,7 @@ const {src, dest, parallel, series, watch} = require('gulp'),
 		uglify = require('gulp-uglify-es').default,
 		concat = require('gulp-concat');
 
-const fonts = () => {
+/*const fonts = () => {
 	src('./src/fonts/**.ttf')
 	.pipe(ttf2woff())
 	.pipe(dest('./app/fonts'))
@@ -49,9 +49,9 @@ const fontsStyle = (done) => {
 	})
 
 	done();
-}
+}*/
 
-const svgSprites = () => {
+/*const svgSprites = () => {
 	return src('./src/images/**.svg')
 	.pipe(svgSprite({
 		mode: {
@@ -61,13 +61,13 @@ const svgSprites = () => {
 		}
 	}))
 	.pipe(dest('./app/images'))
-}
+}*/
 
 //styles libs
 
 const stylesLibs = () => {
 	return src([
-		'node_modules/bootstrap/dist/css/bootstrap.min.css'
+		'node_modules/swiper/swiper-bundle.min.css'
 	])
 		.pipe(concat('_libs.scss'))
 		.pipe(dest('src/scss'))
@@ -122,6 +122,7 @@ const clean = () => {
 //js
 const scripts = () => {
 	return src([
+		'node_modules/swiper/swiper-bundle.esm.browser.min.js',
 		'node_modules/jquery/dist/jquery.min.js',
 		'node_modules/jquery-validation/dist/jquery.validate.min.js',
 		'src/js/main.js'
@@ -145,11 +146,14 @@ const watchFiles = () => {
 //   watch('./src/scss/**/*.scss', stylesLibs);
   watch('./src/scss/**/*.scss', styles);
   watch('./src/index.html', htmlinclude);
+  watch('./src/_header.html', htmlinclude);
+  watch('./src/_footer.html', htmlinclude);
+  watch('./src/_seo.html', htmlinclude);
   watch('./src/images/**/*.{jpg,png,gif,ico,webp,svg}', imgToApp);
-  watch('./src/images/**.svg', svgSprites);
+  //watch('./src/images/**.svg', svgSprites);
   watch('./src/resources/**', resources);
-  watch('./src/fonts/**.ttf', fonts);
-  watch('./src/fonts/**.ttf', fontsStyle);
+//   watch('./src/fonts/**.ttf', fonts);
+//   watch('./src/fonts/**.ttf', fontsStyle);
   watch('./src/js/**/*.js', scripts);
 }
 
@@ -157,7 +161,7 @@ exports.stylesLibs = stylesLibs;
 exports.styles = styles;
 exports.watchFiles = watchFiles;
 
-exports.default = series(clean, parallel(htmlinclude, scripts, fonts, imgToApp, svgSprites),  fontsStyle, stylesLibs, styles, watchFiles);
+exports.default = series(clean, parallel(htmlinclude, scripts, imgToApp), stylesLibs, styles, watchFiles);
 
 
 const stylesBuild = () => {
@@ -194,4 +198,4 @@ const phpBuild = () => {
 		.pipe(dest('./app/'))
 }
 
-exports.build = series(clean, parallel(htmlinclude, scriptsBuild, fonts, phpBuild, imgToApp, svgSprites),  fontsStyle, stylesLibs, stylesBuild); 
+exports.build = series(clean, parallel(htmlinclude, scriptsBuild, phpBuild, imgToApp), stylesLibs, stylesBuild); 

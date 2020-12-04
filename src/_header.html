@@ -1,26 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>Дорзнакпечать</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- Favicon -->
+	<link rel="icon" href="images/favicon.svg">
+	<link rel="shortcut icon" href="images/favicon.svg">
+	<!-- OG Tags -->
+<!--	<meta property="og:title" content="">-->
+<!--	<meta property="og:description" content=''>-->
+<!--	<meta property="og:type" content="article">-->
+<!--	<meta property="og:image" content="">-->
+<!--	<meta property="og:site_name" content="TEST">-->
+	<!-- Main CSS -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
+
+</head>
+
+<body>
+
 <header class="header" id="header">
     <div class="container">
-        <div class="header__wrap">
+        <div class="header__wrap-top">
             <a class="header__logo" href="/">
-					<svg>
-						<use xlink:href="images/sprite.svg#logo.svg"></use>
-				  </svg>
+                <img src="images/logo.svg" alt="logo">
             </a>
+            <span>Автомобильно-дорожная продукция в Москве</span>
+            <span class="work-time">
+                Часы работы:<br>
+                Офис с 8-19 Пн-Пт<br>
+                Склад с 10-17 Пн-Пт
+            </span>
+            <div class="header__phone">
+                <a href="tel:+88006009216">8 (800) 600-92-16 </a>
+                <a href="mailto:info@regionznak.de " class="header__mail">info@regionznak.de </a>
+            </div>
+        </div>
+    </div>
+    <div class="header__wrap-bottom">
+        <div class="container header__container">
             <nav>
                 <ul class="menu">
                     <div class="close">
                         <i class="fa fa-times" aria-hidden="true"></i>
                     </div>
-                    <li class="menu__item"><a href="#about">О КОМПАНИИ</a></li>
-                    <li class="menu__item"><a href="#services">УСЛУГИ</a></li>
-                    <li class="menu__item"><a href="#emit">ПРЕИМУЩЕСТВА</a></li>
-                    <li class="menu__item"><a href="#clients">КЛИЕНТЫ</a></li>
-                    <li class="menu__item"><a href="#contacts">КОНТАКТЫ</a></li>
+                    <li class="menu__item"><a href="#">ГЛАВНАЯ</a></li>
+                    <li class="menu__item"><a href="#">ПРОДУКЦИЯ</a></li>
+                    <li class="menu__item"><a href="#">ПРОИЗВОДСТВО</a></li>
+                    <li class="menu__item"><a href="#">ПОРТФОЛИО</a></li>
+                    <li class="menu__item"><a href="contacts.html">КОНТАКТЫ</a></li>
                 </ul>
             </nav>
-            <div class="header__phone">
-                <a href="tel:+79876543210">+7 (987) 654-32-10</a>
-            </div>
+            <button class="header__btn">Оставить заявку</button>
             <div class="gamburger">
                 <i class="fal fa-bars"></i>
             </div>

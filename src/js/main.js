@@ -32,16 +32,31 @@ $(document).ready(function ($) {
         }
     });
 
-    $('.toTop').on('click', () => {
-        $('html, body').animate({scrollTop: 0}, 800);
-    });
 
     //Modal form
-    $('.header-box__btn-phone, .header-offer__btn, .btn-for-modal, .services-card__btn, .footer__btn, .accord__btn').click(function (e) {
+    $('.button').click(function (e) {
         e.preventDefault();
-        $('#exampleModal').arcticmodal();
-        //location.href = 'pay.html';
+        
     });
+
+    //slider
+    let mySwiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'vertical',
+        loop: true,
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
+      
+      });
 
     // form validation
 

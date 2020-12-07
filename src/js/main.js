@@ -4,16 +4,6 @@
 
 $(function ($) {
     //menu
-    // $('.gamburger').on('click', () => {
-    //     $('.menu').toggleClass('opened');
-    //     $('.gamburger').toggleClass('close-menu');
-    //     $('.close').toggleClass('open');
-    // });
-    // $('.close').on('click', () => {
-    //     $('.menu').toggleClass('opened');
-    //     $('.gamburger').toggleClass('close-menu');
-    //     $('.close').toggleClass('open');
-    // });
     $('.gamburger').on('click', () => {
         $('.header__menu').slideDown(500);
         $('.close1').fadeIn(300);
@@ -42,10 +32,18 @@ $(function ($) {
             $('.toTop').fadeOut();
         }
     });
+    // gallery show
+    $('.portfolio__btn').on('click', () => {
+        $('.photos').fadeIn(500);
+    });
 
+    /*---------------------Tabs-------------------------*/
+	$('.products-card__btn').on('click', function() {
+		$(this).addClass('active-bg').siblings().removeClass('active-bg').closest('.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+    });
 
     //Modal form
-    $('.button, .header__btn').on('click', () => {
+    $('.button, .header__btn, .table__btn').on('click', () => {
         $('#overlay').fadeIn(300);
         $('.modal').fadeIn(700);
     });
@@ -239,3 +237,8 @@ let mySwiper2 = new Swiper('.swiper-container, .swiper-container2', {
       }
 
 });
+
+//portfolio gallery
+
+lightGallery(document.querySelector('#lightgallery'));
+

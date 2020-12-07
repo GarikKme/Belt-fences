@@ -2,8 +2,27 @@
 
 /*------1201px  -  1366px-------*/
 
-@media screen and (max-width: 1365px) {
-	
+@media screen and (max-width: 1500px) {
+	.header {
+    &__menu {
+      li {
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .offer {
+    padding-top: 50px;
+  }
+  .product {
+    padding: 20px 0 50px;
+  }
+  .products {
+    &__title {
+      margin: 50px 0;
+    }
+  }
 }
 
 /* 992-1200px */
@@ -159,7 +178,11 @@
       }
     }
   }
-
+  .tabs__content .mobile{
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
   
 }
 

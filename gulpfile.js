@@ -16,14 +16,16 @@ const {src, dest, parallel, series, watch} = require('gulp'),
 		uglify = require('gulp-uglify-es').default,
 		concat = require('gulp-concat');
 
-/*const fonts = () => {
-	src('./src/fonts/**.ttf')
-	.pipe(ttf2woff())
-	.pipe(dest('./app/fonts'))
-	return src('./src/fonts/**.ttf')
-	.pipe(ttf2woff2())
-	.pipe(dest('./app/fonts'))
-}
+	const fonts = () => {
+			src('./src/fonts/**.ttf')
+			.pipe(ttf2woff())
+			.pipe(dest('./app/fonts'))
+			return src('./src/fonts/**.ttf')
+			.pipe(ttf2woff2())
+			.pipe(dest('./app/fonts'))
+	}
+
+/*
 
 const cb = () => {};
 
@@ -67,7 +69,8 @@ const fontsStyle = (done) => {
 
 const stylesLibs = () => {
 	return src([
-		'node_modules/swiper/swiper-bundle.min.css'
+		'node_modules/swiper/swiper-bundle.min.css',
+		'node_modules/lightgallery.js/dist/css/lightgallery.css'
 	])
 		.pipe(concat('_libs.scss'))
 		.pipe(dest('src/scss'))
@@ -97,7 +100,7 @@ const styles = () => {
 }
 
 const htmlinclude = () => {
-	return src (['./src/index.html', './src/contacts.html', './src/production.html', 'portfolio.html'])
+	return src (['./src/index.html', './src/contacts.html', './src/production.html', './src/portfolio.html', './src/product.html'])
 	.pipe(fileinclude({
       prefix: '@',
       basepath: '@file'
@@ -123,6 +126,7 @@ const clean = () => {
 const scripts = () => {
 	return src([
 		'node_modules/swiper/swiper-bundle.min.js',
+		'node_modules/lightgallery.js/dist/js/lightgallery.min.js',
 		'node_modules/jquery/dist/jquery.min.js',
 		'node_modules/jquery-validation/dist/jquery.validate.min.js',
 		'src/js/main.js'
@@ -151,11 +155,12 @@ const watchFiles = () => {
   watch('./src/contacts.html', htmlinclude);
   watch('./src/production.html', htmlinclude);
   watch('./src/portfolio.html', htmlinclude);
+  watch('./src/product.html', htmlinclude);
   watch('./src/_seo.html', htmlinclude);
   watch('./src/images/**/*.{jpg,png,gif,ico,webp,svg}', imgToApp);
   //watch('./src/images/**.svg', svgSprites);
   watch('./src/resources/**', resources);
-//   watch('./src/fonts/**.ttf', fonts);
+  watch('./src/fonts/**.ttf', fonts);
 //   watch('./src/fonts/**.ttf', fontsStyle);
   watch('./src/js/**/*.js', scripts);
 }
@@ -164,7 +169,7 @@ exports.stylesLibs = stylesLibs;
 exports.styles = styles;
 exports.watchFiles = watchFiles;
 
-exports.default = series(clean, parallel(htmlinclude, scripts, imgToApp), stylesLibs, styles, watchFiles);
+exports.default = series(clean, parallel(htmlinclude, scripts, fonts, imgToApp), stylesLibs, styles, watchFiles);
 
 
 const stylesBuild = () => {
@@ -201,4 +206,4 @@ const phpBuild = () => {
 		.pipe(dest('./app/'))
 }
 
-exports.build = series(clean, parallel(htmlinclude, scriptsBuild, phpBuild, imgToApp), stylesLibs, stylesBuild); 
+exports.build = series(clean, parallel(htmlinclude, scriptsBuild, phpBuild, fonts, imgToApp), stylesLibs, stylesBuild); 

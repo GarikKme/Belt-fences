@@ -484,8 +484,100 @@
 //portfolio
 
 .portfolio {
+	padding-bottom: 100px;
 	&__title {
 		text-align: center;
+		color: $grey;
+		margin-bottom: 60px;
+	}
+	&__wrap {
+		text-align: center;
+		margin-top: 75px;
+	}
+	&__text {
+		margin-top: 75px;
+	}
+	&__gallery {
+		img {
+			margin: 0 12px 20px;
+		}
+	}
+	&__btn {
+		background: linear-gradient(180deg, #FEF4B0 0%, #F6C40D 100%);
+		border-radius: 10px;
+		width: 285px;
+		height: 76px;
+		max-width: 285px;
+		box-shadow: 0 7px 0 $brown;
+		border: none;
+		font-size: 24px;
+		font-weight: 700;
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+}
+
+//products
+.products {
+	padding-bottom: 140px;
+	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	&-card__btn {
+		background: #FFFFFF;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+		border-radius: 10px;
+		width: 350px;
+		max-width: 350px;
+		cursor: pointer;
+		height: 153px;
+		max-height: 153px;
+		border: none;
+		font-size: 30px;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: left;
+		padding-left: 26px;
+		background-image: url(../images/buttons-img.png);
+		background-repeat: no-repeat;
+		background-position: right;
+		margin-right: 28px;
+		margin-bottom: 30px;
+		.active-bg {
+			background-color: $yellow;
+		}
+		&:hover {
+			background-color: $yellow;
+		}
+		&:nth-child(2) {
+			font-size: 20px;
+			background-image: url(../images/buttons-img2.png);
+			margin-right: 28px;
+		}
+		&:nth-child(3) {
+			background-image: url(../images/buttons-img3.png);
+		}
+		&:nth-child(4) {
+			background-image: url(../images/buttons-img4.png);
+			margin-right: 28px;
+		}
+		&:nth-child(5) {
+			font-size: 20px;
+			background-image: url(../images/buttons-img5.png);
+			margin-right: 28px;
+		}
+		&:nth-child(6) {
+			background-image: url(../images/buttons-img6.png);
+		}
+		&:nth-child(7) {
+			background-image: url(../images/buttons-img7.png);
+		}
+	}
+	&__title {
+		text-align: center;
+		margin-top: 100px;
+		margin-bottom: 60px;
 	}
 }
 @import "media";

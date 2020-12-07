@@ -347,6 +347,13 @@ input.valid {
 .swiper-pagination-bullet-active {
   background: #1C86E4;
 }
+.swiper-slide {
+  img {
+    max-height: 375px;
+    height: 350px;
+    width: 100%;
+  }
+}
 .breadcrumb-item {
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 300;
@@ -357,4 +364,78 @@ input.valid {
 }
 .breadcrumb-item.active {
   font-weight: 700;
+}
+.show {
+  display: block;
+}
+
+//tables
+
+.tftable {
+  font-size:20px;
+  text-align: center;
+  color:$grey;
+  width:100%;
+  border-width: 2px;
+  border-color: $grey;
+  border-collapse: collapse;
+  font-family: 'Roboto Condensed', sans-serif;
+  }
+.tftable th {
+  font-size:24px;
+  text-align: center;
+  font-weight: 700;
+  background-color:#F8FBFF;
+  border-width: 2px;
+  padding: 20px;
+  border-style: solid;
+  border-color: $grey;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.tftable tr {
+  background-color:#F8FBFF;
+}
+.tftable td {
+  font-size:20px;
+  border-width: 2px;
+  padding: 20px;
+  border-style: solid;
+  border-color: #729ea5;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.tftable tr:hover {
+  background-color:$white;
+}
+.table__btn {
+  width: 192px;
+  height: 43px;
+  line-height: 43px;
+  border: none;
+  background: linear-gradient(180deg, #FEF4B0 0%, #F6C40D 100%);
+  border-radius: 5px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0 7px 0 $brown;
+  &:hover {
+    color: $white;
+  }
+}
+.tabs__content {
+  display: none;
+  opacity: 0;
+  transition: all .5s ease;
+  animation: appear 1s ease-in 1 normal running;
+}
+.tabs__content.active {
+  display: block;
+  opacity: 1;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

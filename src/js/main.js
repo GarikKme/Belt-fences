@@ -1,19 +1,30 @@
-$(document).ready(function ($) {
-    //menu
-    $('.gamburger').on('click', () => {
-        $('.menu').toggleClass('opened');
-        $('.gamburger').toggleClass('close-menu');
-        $('.close').toggleClass('open');
-    });
-    $('.close').on('click', () => {
-        $('.menu').toggleClass('opened');
-        $('.gamburger').toggleClass('close-menu');
-        $('.close').toggleClass('open');
-    });
+// const {
+//     on
+// } = require("gulp-notify/lib/notify");
 
+$(function ($) {
+    //menu
+    // $('.gamburger').on('click', () => {
+    //     $('.menu').toggleClass('opened');
+    //     $('.gamburger').toggleClass('close-menu');
+    //     $('.close').toggleClass('open');
+    // });
+    // $('.close').on('click', () => {
+    //     $('.menu').toggleClass('opened');
+    //     $('.gamburger').toggleClass('close-menu');
+    //     $('.close').toggleClass('open');
+    // });
+    $('.gamburger').on('click', () => {
+        $('.header__menu').slideDown(500);
+        $('.close1').fadeIn(300);
+    });
+    $('.close1').on('click', () => {
+        $('.header__menu').slideUp(500);
+        $('.close1').fadeOut(300);
+    });
     // Menu Scroll to section
 
-    $('a[href^="#"').click(function () {
+    $('a[href^="#"').on('click', function () {
         let target = $(this).attr('href');
         $('html, body').animate({
             scrollTop: $(target).offset().top
@@ -27,47 +38,39 @@ $(document).ready(function ($) {
     $(window).on('scroll', () => {
         if ($(this).scrollTop() > 250) {
             $('.toTop').fadeIn();
-        }else {
+        } else {
             $('.toTop').fadeOut();
         }
     });
 
 
     //Modal form
-    $('.button').click(function (e) {
-        e.preventDefault();
-        
+    $('.button, .header__btn').on('click', () => {
+        $('#overlay').fadeIn(300);
+        $('.modal').fadeIn(700);
+    });
+    //modal close 
+    $('.close-button').on('click', () => {
+        $('#overlay').fadeOut(300);
+        $('.modal').fadeOut(300);
     });
 
-    //slider
-    let mySwiper = new Swiper('.swiper-container', {
-        // Optional parameters
-        direction: 'vertical',
-        loop: true,
-      
-        // If we need pagination
-        pagination: {
-          el: '.swiper-pagination',
-        },
-      
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }
-      
-      });
+    $('#overlay').on('click', function () {
+        $(this).fadeOut(300);
+        $('.modal').fadeOut(300);
+    });
 
+    
     // form validation
 
-    $(document).ready(function() {
-        $('[data-submit]').on('click', function(e) {
+    $(document).ready(function () {
+        $('[data-submit]').on('click', function (e) {
             e.preventDefault();
             $(this).parent('form').submit();
         })
         $.validator.addMethod(
             "regex",
-            function(value, element, regexp) {
+            function (value, element, regexp) {
                 var re = new RegExp(regexp);
                 return this.optional(element) || re.test(value);
             },
@@ -114,7 +117,7 @@ $(document).ready(function ($) {
                 },
 
                 // Начинаем проверку id="" формы
-                submitHandler: function(form) {
+                submitHandler: function (form) {
                     $('#loader').fadeIn();
                     let $form = $(form);
                     let $formId = $(form).attr('id');
@@ -122,32 +125,32 @@ $(document).ready(function ($) {
                         // Если у формы id="goToNewPage" - делаем:
                         case 'goToNewPage':
                             $.ajax({
-                                type: 'POST',
-                                url: $form.attr('action'),
-                                data: $form.serialize(),
-                            })
-                                .always(function(response) {
+                                    type: 'POST',
+                                    url: $form.attr('action'),
+                                    data: $form.serialize(),
+                                })
+                                .always(function (response) {
                                     //ссылка на страницу "спасибо" - редирект
                                     location.href = '';
                                 });
                             break;
-                        // Если у формы id="popupResult" - делаем:
+                            // Если у формы id="popupResult" - делаем:
                         case 'popupResult':
                             $.ajax({
-                                type: 'POST',
-                                url: $form.attr('action'),
-                                data: $form.serialize(),
-                            })
-                                .always(function(response) {
-                                    setTimeout(function() {
+                                    type: 'POST',
+                                    url: $form.attr('action'),
+                                    data: $form.serialize(),
+                                })
+                                .always(function (response) {
+                                    setTimeout(function () {
                                         $('#loader').fadeOut();
                                     }, 800);
-                                    setTimeout(function() {
+                                    setTimeout(function () {
                                         $('#overlay').fadeIn();
                                         $form.trigger('reset');
                                         //строки для остлеживания целей в Я.Метрике и Google Analytics
                                     }, 1100);
-                                    $('#overlay').on('click', function(e) {
+                                    $('#overlay').on('click', function (e) {
                                         $(this).fadeOut();
                                     });
                                     $('#exampleModal').arcticmodal('close');
@@ -161,10 +164,78 @@ $(document).ready(function ($) {
         }
 
         // Запускаем механизм валидации форм, если у них есть класс .js-form
-        $('.js-form').each(function() {
+        $('.js-form').each(function () {
             valEl($(this));
         });
 
     });
+
+});
+
+//slider main
+let mySwiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    slidesPerView: 3,
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            centeredSlides: true,
+        },
+        768: {
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+            centeredSlides: true,
+        },
+        1100: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+            centeredSlides: false,
+        },
+      }
+
+});
+//slider ownProduct
+let mySwiper2 = new Swiper('.swiper-container, .swiper-container2', {
+    // Optional parameters
+    slidesPerView: 3,
+    loop: true,
+
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            centeredSlides: true,
+        },
+        768: {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            centeredSlides: true,
+        },
+        1100: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            centeredSlides: false,
+        },
+      }
 
 });

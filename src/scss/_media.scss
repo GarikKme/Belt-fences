@@ -9,14 +9,65 @@
 /* 992-1200px */
 @media screen and (max-width: 1200px) {
   .header {
-    .menu {
+    &__menu {
       li {
         margin-right: 20px;
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
       }
     }
 
-    &__phone {
+    .work-time {
       display: none;
+    }
+    &__phone {
+      font-size: 20px;
+    }
+  }
+  .offer {
+    padding-top: 20px;
+    &__container {
+      flex-flow: column-reverse;
+      align-items: center;
+    }
+  }
+  .product {
+    padding: 20px 0 50px;
+    &__wrap {
+      flex-flow: column;
+    }
+  }
+  .production {
+    &__card {
+      &:nth-child(3) {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        width: 286px;
+        max-width: 286px;
+      }
+      &:nth-child(4) {
+        grid-row: 4/5;
+        justify-self: flex-end;
+      }
+      &:nth-child(6) {
+        grid-column: 1/2;
+        grid-row: 5/6;
+        margin-left: 0;
+      }
+      &:nth-child(7) {
+        justify-self: center;
+      }
+    }
+  }
+  .contact {
+    &__img {
+      display: none;
+    }
+  }
+  .contacts__map {
+    iframe {
+      width: 530px;
     }
   }
 }
@@ -26,51 +77,60 @@
   .header {
     .gamburger {
       display: block;
-      font-size: 35px;
-      color: $white;
+    }
+    &__wrap-bottom {
+      position: relative;
     }
 
     nav {
       overflow: hidden;
     }
 
-    .menu {
-      transform: translateY(-300%);
-      overflow: hidden;
-
+    &__menu {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 20px 0 20px 15px;
+      position: absolute;
+      left: 0;
+      margin-top: 33px;
+      z-index: 999;
       li {
         margin-right: 0;
         margin-top: 25px;
       }
     }
 
-    .opened {
+  }
+  .production {
+    &__wrap {
       display: flex;
-      flex-direction: column;
-      position: fixed;
-      width: 100%;
-      left: 0;
-      top: 0;
-      padding-top: 70px;
-      justify-content: center;
+      flex-flow: column;
       align-items: center;
-      transform: translateY(0);
-      transition: all 0.5s ease;
-      z-index: 9;
-      background-color: $white;
     }
-
-    .open {
-      display: block;
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      color: #fff;
-      opacity: 1;
-    }
-
-    .close-menu {
-      display: none;
+    &__card {
+      &:nth-child(2) {
+        width: 350px;
+        max-width: 350px;
+        max-height: 300px;
+        height: 300px;
+        background-position: top right;
+      }
+      &:nth-child(3) {
+        width: 350px;
+        max-width: 350px;
+      }
+      &:nth-child(5) {
+        width: 350px;
+        max-width: 350px;
+      }
+      &:nth-child(6) {
+        width: 350px;
+        max-width: 350px;
+      }
+      
     }
   }
 
@@ -87,10 +147,34 @@
       margin-top: 50px;
     }
   }
+  .contacts {
+    &__wrap {
+      flex-flow: column;
+      align-items: center;
+    }
+    &__map { 
+      iframe {
+        margin-top: 30px;
+        width: 100%;
+      }
+    }
+  }
+
+  
 }
 
 /* 576-768px */
 @media screen and (max-width: 768px) {
+  .header {
+    &__wrap-top {
+      span {
+        display: none;
+      }
+    }
+    &__btn {
+      width: 100%;
+    }
+  }
   .box-modal {
     width: 100%;
   }
@@ -112,27 +196,144 @@
       max-width: 100%;
     }
 
-    &-control {
-      width: 100%;
-    }
-
-    &-check {
-      padding-left: 3.5rem;
-    }
-
     &__btn {
       width: 100%;
     }
-
-    &-check-label {
-      width: 100%;
+  }
+  .modal {
+    padding: 40px;
+    height: 603px;
+  }
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    display: none;
+  }
+  .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    display: none;
+  }
+  .footer {
+    .work-time {
+      margin: 30px 0;
     }
-
-    .check__box {
-      left: 0.5em;
+    &-wrap {
+      flex-flow: column;
+      &__contacts-box {
+        text-align: left;
+      }
     }
   }
 }
 
 /* 320-576px */
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  .header {
+    &__container {
+      display: block;
+    }
+    &__wrap-top {
+      flex-flow: column;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    &__wrap-bottom {
+      min-height:  140px;
+      height: 140px;
+    }
+    &__btn {
+      max-width: 100%;
+      margin-top: 70px;
+    }
+    &__menu {
+      margin-top: 55px;
+    }
+  }
+  .offer {
+    &__box {
+      margin-left: 0;
+    }
+    &__text {
+      font-size: 20px;
+    }
+  }
+  .production {
+    &__card {
+      &:nth-child(2) {
+        width: 90%;
+        max-width: 100%;
+        max-height: 300px;
+        height: 300px;
+        background-position: top right;
+      }
+      &:nth-child(3) {
+        width: 90%;
+        max-width: 100%;
+      }
+      &:nth-child(5) {
+        width: 90%;
+        max-width: 100%;
+      }
+      &:nth-child(6) {
+        width: 90%;
+        max-width: 100%;
+      }
+      &:nth-child(7) {
+        width: 90%;
+        max-width: 100%;
+        background-position: center;
+      }
+      &:nth-child(1) {
+        width: 90%;
+        max-width: 100%;
+        background-position: center;
+      }
+      &:nth-child(4) {
+        width: 90%;
+        max-width: 100%;
+      }
+      
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .form.modal {
+    padding: 30px 10px;
+    background-position: center;
+    background-size: cover;
+    .form-group {
+      width: 80%;
+    }
+    .form__btn {
+      width: 80%;
+    }
+  }
+  .seo {
+    padding: 50px 0;
+    &__text {
+      text-align: justify;
+      font-size: 14px;
+    }
+  }
+  .production {
+    &__card-title {
+      font-size: 20px;
+    }
+  }
+  .form {
+    max-width: 100%;
+    width: 90%;
+    .form-control {
+      width: 100%;
+      max-width: 100%;
+    }
+    .form-group {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}

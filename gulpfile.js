@@ -97,7 +97,7 @@ const styles = () => {
 }
 
 const htmlinclude = () => {
-	return src (['./src/index.html'])
+	return src (['./src/index.html', './src/contacts.html', './src/production.html', 'portfolio.html'])
 	.pipe(fileinclude({
       prefix: '@',
       basepath: '@file'
@@ -122,7 +122,7 @@ const clean = () => {
 //js
 const scripts = () => {
 	return src([
-		'node_modules/swiper/swiper-bundle.esm.browser.min.js',
+		'node_modules/swiper/swiper-bundle.min.js',
 		'node_modules/jquery/dist/jquery.min.js',
 		'node_modules/jquery-validation/dist/jquery.validate.min.js',
 		'src/js/main.js'
@@ -148,6 +148,9 @@ const watchFiles = () => {
   watch('./src/index.html', htmlinclude);
   watch('./src/_header.html', htmlinclude);
   watch('./src/_footer.html', htmlinclude);
+  watch('./src/contacts.html', htmlinclude);
+  watch('./src/production.html', htmlinclude);
+  watch('./src/portfolio.html', htmlinclude);
   watch('./src/_seo.html', htmlinclude);
   watch('./src/images/**/*.{jpg,png,gif,ico,webp,svg}', imgToApp);
   //watch('./src/images/**.svg', svgSprites);

@@ -89,6 +89,10 @@
 	background-image: url(../images/offer-bg.png);
 	background-repeat: no-repeat;
 	background-size: cover;
+	img {
+		width: 591px;
+		height: 456px;
+	}
 	&__container {
 		display: flex;
 	}
@@ -297,6 +301,9 @@
 	&__box {
 		display: flex;
 		justify-content: space-between;
+	}
+	&__img {
+		width: 100%;
 	}
 }
 //contact2

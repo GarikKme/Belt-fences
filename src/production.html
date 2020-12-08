@@ -1,70 +1,141 @@
-<!-- Header -->
-@include('_header.html')
-<!--End of the Header -->
-<section class="ownProduct">
-    <div class="container">
-        <nav class="breadcrumb">
-            <a class="breadcrumb-item" href="index.html">Главная</a>
-            <span> / </span>
-            <span class="breadcrumb-item active">Производство</span>
-        </nav>
-        <h1 class="ownProduct__title">
-            Собственное производство<br>
-            на европейском оборудовании
-        </h1>
-        <p class="ownProduct__subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa ultrices magna tellus nisi tortor, libero laoreet. Aliquam pellentesque non volutpat quis magna sed est nullam. Quis malesuada at et euismod. Tellus egestas sociis iaculis aliquet arcu sollicitudin posuere tortor. Donec id et viverra massa tellus, fringilla id. Est a eu, bibendum ultrices quis aenean velit. Facilisi cursus nunc, volutpat, mi nec ullamcorper ornare massa pellentesque. In aliquet egestas tellus aliquam mattis ante. Ac consectetur erat eu maecenas velit pharetra. Aenean vitae odio nulla nisi, vulputate convallis facilisis. Vitae lobortis faucibus imperdiet elit, ullamcorper non euismod ultrices. Nec lectus maecenas ut bibendum pretium risus luctus. 
-        </p>
-        <div class="ownProduct__slider">
-            <!-- Slider main container -->
-    		<div class="swiper-container swiper-container2">
-    			<!-- Additional required wrapper -->
-    			<div class="swiper-wrapper">
-    				<!-- Slides -->
-    				<div class="swiper-slide">
-    					<img src="images/ownProduct-img.jpg" alt="works">
-    				</div>
-    				<div class="swiper-slide">
-    					<img src="images/ownProduct-img2.jpg" alt="works">
-    				</div>
-    				<div class="swiper-slide">
-    					<img src="images/ownProduct-img3.jpg" alt="works">
-    				</div>
-                    <div class="swiper-slide">
-    					<img src="images/ownProduct-img4.jpg" alt="works">
-                    </div>
-                    <div class="swiper-slide">
-    					<img src="images/ownProduct-img5.jpg" alt="works">
-                    </div>
-                    <div class="swiper-slide">
-    					<img src="images/ownProduct-img6.jpg" alt="works">
-                    </div>
-                    <div class="swiper-slide">
-    					<img src="images/ownProduct-img7.jpg" alt="works">
-                    </div>
-                    <div class="swiper-slide">
-    					<img src="images/ownProduct-img8.jpg" alt="works">
-                    </div>
-                    <div class="swiper-slide">
-    					<img src="images/ownProduct-img9.jpg" alt="works">
-    				</div>
-    			</div>
-    		</div>
-    		<div class="swiper-button-prev">
-    			<img src="images/arrowLeft.svg" alt="arrow">
-    		</div>
-    		<div class="swiper-button-next">
-    			<img src="images/arrowRight.svg" alt="arrow">
-    		</div>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Дорзнакпечать</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.svg">
+    <link rel="shortcut icon" href="images/favicon.svg">
+    <!-- OG Tags -->
+    <!--	<meta property="og:title" content="">-->
+    <!--	<meta property="og:description" content=''>-->
+    <!--	<meta property="og:type" content="article">-->
+    <!--	<meta property="og:image" content="">-->
+    <!--	<meta property="og:site_name" content="TEST">-->
+    <!-- Main CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__wrap-top">
+                <a class="header__logo" href="/">
+                    <img src="images/logo.svg" alt="logo">
+                </a>
+                <span>Автомобильно-дорожная продукция в Москве</span>
+                <span class="work-time">
+                    Часы работы:<br>
+                    Офис с 8-19 Пн-Пт<br>
+                    Склад с 10-17 Пн-Пт
+                </span>
+                <div class="header__phone">
+                    <a href="tel:88006009216">8 (800) 600-92-16 </a>
+                    <a href="mailto:info@regionznak.de " class="header__mail">info@regionznak.de </a>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
-<!-- contact -->
-@include('_contact.html')
-<!--End of the  contact -->
-<!-- seo -->
-@include('_seo.html')
-<!--End of the  seo -->
-<!-- footer -->
-@include('_footer.html')
-<!--End of the  footer-->
+        <div class="header__wrap-bottom">
+            <div class="container header__container">
+                <div class="close1">
+                    <img src="images/close2.svg" alt="close">
+                </div>
+                <nav>
+                    <ul class="header__menu">
+                        <li class="menu__item"><a href="index.html">ГЛАВНАЯ</a></li>
+                        <li class="menu__item"><a href="product.html">ПРОДУКЦИЯ</a></li>
+                        <li class="menu__item"><a href="production.html">ПРОИЗВОДСТВО</a></li>
+                        <li class="menu__item"><a href="portfolio.html">ПОРТФОЛИО</a></li>
+                        <li class="menu__item"><a href="contacts.html">КОНТАКТЫ</a></li>
+                    </ul>
+                </nav>
+                <button class="header__btn">Оставить заявку</button>
+
+            </div>
+        </div>
+    </header>
+    <!--End of the Header -->
+    <section class="ownProduct">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a class="breadcrumb-item" href="index.html">Главная</a>
+                <span> / </span>
+                <span class="breadcrumb-item active">Производство</span>
+            </nav>
+            <h1 class="ownProduct__title">
+                Собственное производство<br>
+                на европейском оборудовании
+            </h1>
+            <p class="ownProduct__subtitle">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa ultrices magna tellus nisi tortor, libero
+                laoreet. Aliquam pellentesque non volutpat quis magna sed est nullam. Quis malesuada at et euismod.
+                Tellus egestas sociis iaculis aliquet arcu sollicitudin posuere tortor. Donec id et viverra massa
+                tellus, fringilla id. Est a eu, bibendum ultrices quis aenean velit. Facilisi cursus nunc, volutpat, mi
+                nec ullamcorper ornare massa pellentesque. In aliquet egestas tellus aliquam mattis ante. Ac consectetur
+                erat eu maecenas velit pharetra. Aenean vitae odio nulla nisi, vulputate convallis facilisis. Vitae
+                lobortis faucibus imperdiet elit, ullamcorper non euismod ultrices. Nec lectus maecenas ut bibendum
+                pretium risus luctus.
+            </p>
+            <div class="ownProduct__slider">
+                <!-- Slider main container -->
+                <div class="swiper-container swiper-container2">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="images/ownProduct-img.jpg" alt="works">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/ownProduct-img2.jpg" alt="works">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/ownProduct-img3.jpg" alt="works">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/ownProduct-img4.jpg" alt="works">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/ownProduct-img5.jpg" alt="works">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/ownProduct-img6.jpg" alt="works">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/ownProduct-img7.jpg" alt="works">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/ownProduct-img8.jpg" alt="works">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/ownProduct-img9.jpg" alt="works">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev">
+                    <img src="images/arrowLeft.svg" alt="arrow">
+                </div>
+                <div class="swiper-button-next righter">
+                    <img src="images/arrowRight.svg" alt="arrow">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact -->
+    @include('_contact.html')
+    <!--End of the  contact -->
+    <!-- seo -->
+    @include('_seo.html')
+    <!--End of the  seo -->
+    <!-- footer -->
+    @include('_footer.html')
+    <!--End of the  footer-->

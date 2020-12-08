@@ -109,20 +109,30 @@ p {
 }
 
 .gamburger {
-    width: 60px;
-    height: 7px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 14px #fff, 0 28px #fff;
     position: absolute;
-    top: 16px;
+    top: 5px;
+    right: 15px;
     display: none;
+    img {
+      max-width: 32px !important;
+      height: 32px !important;
+    }
+}
+.gamburger2 {
+  // position: absolute;
+  top: 5px;
+  right: 15px;
+  display: none;
+  img {
+    max-width: 32px !important;
+    height: 32px !important;
+  }
 }
 
 .close1{
   display: none;
   position: absolute;
-  top: 88px;
+  top: 20px;
   right: 30px;
   z-index: 9999;
 }
@@ -323,6 +333,9 @@ input.valid {
 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
   right: -25px;
 }
+.righter {
+  right: -40px;
+}
 .swiper-pagination-bullet {
   width: 11px;
   height: 11px;
@@ -422,5 +435,13 @@ input.valid {
   }
   to {
     opacity: 1;
+  }
+}
+.mobile-header {
+  display: none;
+}
+.offer {
+  .header__menu {
+    display: none;
   }
 }

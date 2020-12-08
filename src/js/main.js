@@ -12,6 +12,15 @@ $(function ($) {
         $('.header__menu').slideUp(500);
         $('.close1').fadeOut(300);
     });
+    $('.gamburger2').on('click', () => {
+        $('.header__menu').slideDown(500);
+        $('nav').slideDown(500);
+        $('.close1').fadeIn(300);
+    });
+    $('.close1').on('click', () => {
+        $('.header__menu').slideUp(500);
+        $('.close1').fadeOut(300);
+    });
     // Menu Scroll to section
 
     $('a[href^="#"').on('click', function () {
@@ -207,12 +216,12 @@ let mySwiper = new Swiper('.swiper-container', {
     },
     breakpoints: {
         320: {
-            slidesPerView: 'auto',
+            slidesPerView: 1,
             spaceBetween: 20,
             centeredSlides: true,
         },
         768: {
-            slidesPerView: 'auto',
+            slidesPerView: 2,
             spaceBetween: 40,
             centeredSlides: true,
         },

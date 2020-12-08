@@ -52,7 +52,7 @@ $(function ($) {
     });
 
     //Modal form
-    $('.button, .header__btn, .table__btn').on('click', () => {
+    $('.offer__btn, .header__btn, .table__btn').on('click', () => {
         $('#loader').fadeIn(300);
         $('.modal').fadeIn(700);
     });

@@ -177,7 +177,6 @@
       align-items: center;
     }
     &__card {
-      margin-bottom: 30px;
       &-title {
         font-size: 20px;
         line-height: 23px;
@@ -192,6 +191,7 @@
         background-position: right;
         p {
           margin-bottom: 20px;
+          margin-left: 20px;
         }
       }
       &:nth-child(2) {
@@ -200,6 +200,11 @@
         height: 153px;
         max-height: 100%;
         background-image: url(../images/buttons-img2.png);
+        padding-bottom: 0;
+        p {
+          margin-bottom: 20px;
+          margin-left: 20px;
+        }
       }
       &:nth-child(3) {
         width: 300px;
@@ -208,6 +213,10 @@
         max-height: 100%;
         background-image: url(../images/buttons-img3.png);
         background-position: right;
+        p {
+          margin-bottom: 20px;
+          margin-left: 20px;
+        }
       }
       &:nth-child(4) {
         width: 300px;
@@ -215,6 +224,10 @@
         height: 153px;
         max-height: 100%;
         background-image: url(../images/buttons-img4.png);
+        p {
+          margin-bottom: 20px;
+          margin-left: 20px;
+        }
       }
       &:nth-child(5) {
         width: 300px;
@@ -222,6 +235,11 @@
         height: 153px;
         max-height: 100%;
         background-image: url(../images/buttons-img5.png);
+        padding-bottom: 0;
+        p {
+          margin-bottom: 20px;
+          margin-left: 20px;
+        }
       }
       &:nth-child(6) {
         width: 300px;
@@ -231,6 +249,7 @@
         background-image: url(../images/buttons-img6.png);
         p {
           margin-bottom: 20px;
+          margin-left: 20px;
         }
       }
       &:nth-child(7) {
@@ -242,6 +261,7 @@
         background-position: right;
         p {
           margin-bottom: 20px;
+          margin-left: 20px;
         }
       }
     }
@@ -377,9 +397,6 @@
     font-size: 25px;
   }
   .header {
-    &__container {
-      // display: block;
-    }
     &__wrap-top {
       flex-flow: column;
       margin-bottom: 10px;
@@ -390,9 +407,6 @@
     }
     &__btn {
       margin-top: 0;
-    }
-    &__menu {
-      // margin-top: 55px;
     }
     &__phone {
       margin-top: 50px;
@@ -416,8 +430,8 @@
     }
   }
   .production {
+    padding-top: 50px;
     &__card {
-      margin-bottom: 30px;
       &-title {
         font-size: 20px;
         line-height: 23px;
@@ -445,6 +459,9 @@
         width: 100%;
       }
     }
+  }
+  .works {
+    padding-top: 50px;
   }
 }
 

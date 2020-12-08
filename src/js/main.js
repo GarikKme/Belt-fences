@@ -44,16 +44,16 @@ $(function ($) {
 
     //Modal form
     $('.button, .header__btn, .table__btn').on('click', () => {
-        $('#overlay').fadeIn(300);
+        $('#loader').fadeIn(300);
         $('.modal').fadeIn(700);
     });
     //modal close 
     $('.close-button').on('click', () => {
-        $('#overlay').fadeOut(300);
+        $('#loader').fadeOut(300);
         $('.modal').fadeOut(300);
     });
 
-    $('#overlay').on('click', function () {
+    $('#loader').on('click', function () {
         $(this).fadeOut(300);
         $('.modal').fadeOut(300);
     });
@@ -92,9 +92,6 @@ $(function ($) {
                     email: {
                         required: true,
                         email: true
-                    },
-                    checkbox: {
-                        required: true
                     }
                 },
                 messages: {
@@ -108,9 +105,6 @@ $(function ($) {
                     email: {
                         required: 'Введите E-mail',
                         email: 'Неверный формат E-mail'
-                    },
-                    checkbox: {
-                        required: 'Этот пункт обязателен для заполнения'
                     }
                 },
 
@@ -146,12 +140,36 @@ $(function ($) {
                                     setTimeout(function () {
                                         $('#overlay').fadeIn();
                                         $form.trigger('reset');
-                                        //строки для остлеживания целей в Я.Метрике и Google Analytics
                                     }, 1100);
                                     $('#overlay').on('click', function (e) {
                                         $(this).fadeOut();
+                                        $('#thx').fadeOut();
                                     });
-                                    $('#exampleModal').arcticmodal('close');
+                                    $('.modal').fadeOut();
+                                    $('#thx').fadeIn();
+
+                                });
+                            break;
+                            case 'popupResult2':
+                            $.ajax({
+                                    type: 'POST',
+                                    url: $form.attr('action'),
+                                    data: $form.serialize(),
+                                })
+                                .always(function (response) {
+                                    setTimeout(function () {
+                                        $('#loader').fadeOut();
+                                    }, 800);
+                                    setTimeout(function () {
+                                        $('#overlay').fadeIn();
+                                        $form.trigger('reset');
+                                    }, 1100);
+                                    $('#overlay').on('click', function (e) {
+                                        $(this).fadeOut();
+                                        $('#thx').fadeOut();
+                                    });
+                                    $('.modal').fadeOut();
+                                    $('#thx').fadeIn();
 
                                 });
                             break;

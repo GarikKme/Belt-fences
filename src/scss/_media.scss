@@ -47,8 +47,6 @@
   .offer {
     padding-top: 20px;
     &__container {
-      flex-flow: column-reverse;
-      align-items: center;
       position: relative;
     }
   }
@@ -61,22 +59,7 @@
   .production {
     &__card {
       &:nth-child(3) {
-        grid-column: 1 / 2;
-        grid-row: 4 / 5;
-        width: 286px;
-        max-width: 286px;
-      }
-      &:nth-child(4) {
-        grid-row: 4/5;
-        justify-self: flex-end;
-      }
-      &:nth-child(6) {
-        grid-column: 1/2;
-        grid-row: 5/6;
-        margin-left: 0;
-      }
-      &:nth-child(7) {
-        justify-self: center;
+        margin-top: 40px;
       }
     }
   }
@@ -90,14 +73,24 @@
       width: 530px;
     }
   }
+  .works {
+    &__box {
+      justify-content: center;
+    }
+    &__card {
+      &:nth-child(2),&:nth-child(4){
+        margin-left: 0;
+      }
+      &:nth-child(2) {
+        margin-top: 30px;
+      }
+    }
+  }
 }
 
 /* 768-992px */
 @media screen and (max-width: 992px) {
-  nav {
-    // display: none;
-    
-  }
+  
   .gamburger2 {
     display: block;
   }
@@ -157,6 +150,7 @@
 
   }
   .offer {
+    background-position: center;
     .close1 {
       img {
         width: 100%;
@@ -168,102 +162,6 @@
   }
     &__box {
       margin-left: 0;
-    }
-  }
-  .production {
-    &__wrap {
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-    }
-    &__card {
-      &-title {
-        font-size: 20px;
-        line-height: 23px;
-        margin-bottom: 20px;
-      }
-      &:nth-child(1) {
-        width: 300px;
-        max-width: 300px;
-        height: 153px;
-        max-height: 100%;
-        background-image: url(../images/buttons-img.png);
-        background-position: right;
-        p {
-          margin-bottom: 20px;
-          margin-left: 20px;
-        }
-      }
-      &:nth-child(2) {
-        width: 300px;
-        max-width: 300px;
-        height: 153px;
-        max-height: 100%;
-        background-image: url(../images/buttons-img2.png);
-        padding-bottom: 0;
-        p {
-          margin-bottom: 20px;
-          margin-left: 20px;
-        }
-      }
-      &:nth-child(3) {
-        width: 300px;
-        max-width: 300px;
-        height: 153px;
-        max-height: 100%;
-        background-image: url(../images/buttons-img3.png);
-        background-position: right;
-        p {
-          margin-bottom: 20px;
-          margin-left: 20px;
-        }
-      }
-      &:nth-child(4) {
-        width: 300px;
-        max-width: 300px;
-        height: 153px;
-        max-height: 100%;
-        background-image: url(../images/buttons-img4.png);
-        p {
-          margin-bottom: 20px;
-          margin-left: 20px;
-        }
-      }
-      &:nth-child(5) {
-        width: 300px;
-        max-width: 300px;
-        height: 153px;
-        max-height: 100%;
-        background-image: url(../images/buttons-img5.png);
-        padding-bottom: 0;
-        p {
-          margin-bottom: 20px;
-          margin-left: 20px;
-        }
-      }
-      &:nth-child(6) {
-        width: 300px;
-        max-width: 300px;
-        height: 153px;
-        max-height: 100%;
-        background-image: url(../images/buttons-img6.png);
-        p {
-          margin-bottom: 20px;
-          margin-left: 20px;
-        }
-      }
-      &:nth-child(7) {
-        width: 300px;
-        max-width: 300px;
-        height: 153px;
-        max-height: 100%;
-        background-image: url(../images/buttons-img7.png);
-        background-position: right;
-        p {
-          margin-bottom: 20px;
-          margin-left: 20px;
-        }
-      }
     }
   }
 
@@ -326,6 +224,13 @@
     }
     &__btn {
       width: 100%;
+    }
+  }
+  .production {
+    &__card {
+      &:nth-child(2) {
+        margin-top: 40px;
+      }
     }
   }
   .box-modal {
@@ -432,11 +337,6 @@
   .production {
     padding-top: 50px;
     &__card {
-      &-title {
-        font-size: 20px;
-        line-height: 23px;
-        margin-bottom: 20px;
-      }
       &:nth-child(1) {
         width: 100%;
       }

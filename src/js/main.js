@@ -42,7 +42,8 @@ $(function ($) {
         }
     });
     // gallery show
-    $('.portfolio__btn').on('click', () => {
+    $('.portfolio__btn').on('click', function(){
+        $(this).html('Больше нет');
         $('.photos').fadeIn(500);
     });
 
@@ -197,42 +198,6 @@ $(function ($) {
 
 });
 
-//slider main
-let mySwiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    slidesPerView: 3,
-    loop: true,
-
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            centeredSlides: true,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-            centeredSlides: true,
-        },
-        1100: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-            centeredSlides: false,
-        },
-      }
-
-});
 //slider ownProduct
 let mySwiper2 = new Swiper('.swiper-container, .swiper-container2', {
     // Optional parameters

@@ -37,10 +37,38 @@
 <!-- Modal window -->
     <form action="success.php" method="POST" class="form modal js-form" id="popupResult2" style="display: none;">
         <div class="close-button">
-            <img src="images/close.svg" alt="close">
+            <img src="images/close2.svg" alt="close">
         </div>
         <h2 class="form__title">
             Оставьте заявку
+        </h2>
+        <p class="form__text">
+            Оставьте свои контактные данные,<br>
+            и наши специалисты свяжутся с вами
+        </p>
+        <div class="form-group">
+            <img src="images/user-red.svg" alt="name">
+            <input type="text" class="form-control" name="name" placeholder="Имя">
+        </div>
+        <div class="form-group">
+            <img src="images/phone-red.svg" alt="phone">
+            <input type="tel" class="form-control" name="tel" placeholder="Телефон">
+        </div>
+        <div class="form-group">
+            <img src="images/mail-red.svg" alt="email">
+            <input type="email" class="form-control" name="email" placeholder="E-mail"></div>
+        <button class="button form__btn" data-submit>Отправить заявку</button>
+        <p class="form__text2">
+            Нажимая на кнопку Заказать продвижение, вы даете согласие на обработку своих персональных данных
+        </p>
+    </form>
+    <!-- Modal window price-->
+    <form action="success.php" method="POST" class="form modal2 js-form" id="popupResult3" style="display: none;">
+        <div class="close-button">
+            <img src="images/close2.svg" alt="close">
+        </div>
+        <h2 class="form__title">
+            Запросить цену
         </h2>
         <p class="form__text">
             Оставьте свои контактные данные,<br>

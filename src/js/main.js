@@ -1,6 +1,4 @@
-// const {
-//     on
-// } = require("gulp-notify/lib/notify");
+
 
 $(function ($) {
     //menu
@@ -43,7 +41,7 @@ $(function ($) {
     });
     // gallery show
     $('.portfolio__btn').on('click', function(){
-        $(this).html('Больше нет');
+        $(this).fadeOut();
         $('.photos').fadeIn(500);
     });
 
@@ -57,15 +55,21 @@ $(function ($) {
         $('#loader').fadeIn(300);
         $('.modal').fadeIn(700);
     });
+    $('.production__btn').on('click', () => {
+        $('#loader').fadeIn(300);
+        $('.modal2').fadeIn(700);
+    });
     //modal close 
     $('.close-button').on('click', () => {
         $('#loader').fadeOut(300);
         $('.modal').fadeOut(300);
+        $('.modal2').fadeOut(300);
     });
 
     $('#loader').on('click', function () {
         $(this).fadeOut(300);
         $('.modal').fadeOut(300);
+        $('.modal2').fadeOut(300);
     });
 
     
@@ -179,6 +183,29 @@ $(function ($) {
                                         $('#thx').fadeOut();
                                     });
                                     $('.modal').fadeOut();
+                                    $('#thx').fadeIn();
+
+                                });
+                            break;
+                            case 'popupResult3':
+                            $.ajax({
+                                    type: 'POST',
+                                    url: $form.attr('action'),
+                                    data: $form.serialize(),
+                                })
+                                .always(function (response) {
+                                    setTimeout(function () {
+                                        $('#loader').fadeOut();
+                                    }, 800);
+                                    setTimeout(function () {
+                                        $('#overlay').fadeIn();
+                                        $form.trigger('reset');
+                                    }, 1100);
+                                    $('#overlay').on('click', function (e) {
+                                        $(this).fadeOut();
+                                        $('#thx').fadeOut();
+                                    });
+                                    $('.modal2').fadeOut();
                                     $('#thx').fadeIn();
 
                                 });

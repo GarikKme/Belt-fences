@@ -217,6 +217,7 @@ p {
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
     color: $white;
+    text-transform: uppercase;
   }
 
   &-group {
@@ -306,14 +307,36 @@ input.valid {
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
   z-index: 999999;
   background-image: url(../images/form-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 50px 60px 92px 39px;
+  padding: 20px 60px 30px 39px;
+  border-radius: 20px;
+  max-width: 396px;
+  width: 396px;
+  max-height: 630px;
   .form__text {
-    color: $black;
+    color: $white;
+  }
+}
+.modal2 {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 999999;
+  background-image: url(../images/form-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 60px 30px 39px;
+  border-radius: 20px;
+  max-width: 396px;
+  width: 396px;
+  max-height: 630px;
+  .form__text {
+    color: $white;
   }
 }
 
